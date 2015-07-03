@@ -26,3 +26,39 @@ header nav ul li {
     padding: 5px;
     text-transform: uppercase;
 }
+
+header nav ul li a {
+    text-transform: uppercase;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    padding: 30px;
+}
+
+footer nav  {
+    padding: 0;
+}
+
+footer nav ul {
+    margin: 10px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+footer nav ul li a {
+    text-transform: uppercase;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}

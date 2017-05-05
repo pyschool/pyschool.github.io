@@ -37,6 +37,7 @@ header small {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    padding-bottom: 20px;
 }
 
 .workshops ul li a {

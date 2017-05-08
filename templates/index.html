@@ -19,15 +19,18 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">[English]</a></li>
-                    <li><a href="index.es.html">Spanish</a></li>
+                    <li><a href="index.html">[{{ gettext('English') }}]</a></li>
+                    <li><a href="index.es.html">{{ gettext('Spanish') }}</a></li>
                 </ul>
             </nav>
             <div class="logo"></div>
             <h1>PySchool</h1>
-            <p>Stories to learn Python stuff.</p>
+            <p>{{ gettext('Stories to learn Python stuff.') }}</p>
             <small>
-              Inspired by <a href="https://nodeschool.io/">NodeSchool</a>
+              {{
+                  gettext('Inspired by %(nodeschool_link)s')|
+                  format(nodeschool_link='<a href="https://nodeschool.io/">NodeSchool</a>')
+              }}
             </small>
         </header>
         <div class="workshops">
@@ -35,31 +38,31 @@
                 <li>
                     <a href="https://github.com/pyschool/hipyschool">Hi Pyschool</a>
                     <code>pip install hipyschool</code>
-                    <p>Sample story (fork or copy to create your own story).</p>
+                    <p>{{ gettext('Sample story (fork or copy to create your own story).') }}</p>
                 </li>
                 <li>
                     <a href="https://github.com/sophilabs/py101">Python 101</a>
                     <code>pip install py1010</code>
-                    <p>A Pyschool story for learning python essentials.</p>
+                    <p>{{ gettext('A Pyschool story for learning python essentials.') }}</p>
                 </li>
                 <li>
                     <a href="https://github.com/sophilabs/learnregex">Learn Regex</a>
                     <code>pip install learnregex</code>
-                    <p>Workshop for learning regular expressions using the commandline.</p>
+                    <p>{{ gettext('Workshop for learning regular expressions using the commandline.') }}</p>
                 </li>
                 <li>
                     <a href="https://github.com/sophilabs/unchaindjango">Unchain Django</a>
+                    <p>{{ gettext('Learn Django [work in progress].') }}</p>
                     <code>pip install unchaindjango</code>
-                    <p>Learn Django [work in progress].</p>
                 </li>
             </ul>
         </div>
         <footer>
             <nav>
                 <ul>
-                    <li><a href="https://github.com/pyschool">Contribute</a></li>
+                    <li><a href="https://github.com/pyschool">{{ gettext('Contribute') }}</a></li>
                     <li><a href="https://twitter.com/pyschool">@pyschool</a></li>
-                    <li><a href="https://github.com/pyschool/organization">Organize</a></li>
+                    <li><a href="https://github.com/pyschool/organization">{{ gettext('Organize') }}</a></li>
                 </ul>
             </nav>
         </footer>

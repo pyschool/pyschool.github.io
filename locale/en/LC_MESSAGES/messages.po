@@ -1,0 +1,62 @@
+# English translations for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-05-08 13:16-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: templates/index.html:22
+msgid "English"
+msgstr ""
+
+#: templates/index.html:23
+msgid "Spanish"
+msgstr ""
+
+#: templates/index.html:28
+msgid "Stories to learn Python stuff."
+msgstr ""
+
+#: templates/index.html:31
+#, python-format
+msgid "Inspired by %(nodeschool_link)s"
+msgstr ""
+
+#: templates/index.html:41
+msgid "Sample story (fork or copy to create your own story)."
+msgstr ""
+
+#: templates/index.html:46
+msgid "A Pyschool story for learning python essentials."
+msgstr ""
+
+#: templates/index.html:51
+msgid "Workshop for learning regular expressions using the commandline."
+msgstr ""
+
+#: templates/index.html:55
+msgid "Learn Django [work in progress]."
+msgstr ""
+
+#: templates/index.html:63
+msgid "Contribute"
+msgstr ""
+
+#: templates/index.html:65
+msgid "Organize"
+msgstr ""
+

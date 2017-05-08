@@ -19,8 +19,8 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">[{{ gettext('English') }}]</a></li>
-                    <li><a href="index.es.html">{{ gettext('Spanish') }}</a></li>
+                    <li><a href="index.html">{{ gettext('[English]') }}</a></li>
+                    <li><a href="index.es.html">{{ gettext('[Spanish]') }}</a></li>
                 </ul>
             </nav>
             <div class="logo"></div>
@@ -33,7 +33,7 @@
               }}
             </small>
         </header>
-        <div class="workshops">
+        <section class="workshops">
             <ul>
                 <li>
                     <a href="https://github.com/pyschool/hipyschool">Hi Pyschool</a>
@@ -51,7 +51,92 @@
                     <p>{{ gettext('Workshop for learning regular expressions using the commandline.') }}</p>
                 </li>
             </ul>
-        </div>
+        </section>
+
+        <section class="contribute">
+          <h2>{{ gettext('Contribute') }}</h2>
+          <p><em>“{{ gettext('The only way to learn a new programming language is by writing programs in it.') }}”</em></p>
+          <p>― <a href="https://wikipedia.org/wiki/Dennis_Ritchie">Dennis Ritchie</a></p>
+          <p>{{ gettext('Pyschool could always use more stories, whether as specific python features, existing libraries, programming concepts, or even programming concepts not specific to Python itself like event handling, threading and such. New stories
+          	are always welcome :)') }}
+          </p>
+
+          <a name="user-content-get-started"></a>
+          <h3>
+          	<a id="user-content-get-started" class="anchor" href="#get-started" aria-hidden="true">
+          	</a>
+          	{{ gettext('Get Started!') }}
+          </h3>
+          <p>{{ gettext('Ready to write your story? Here\'s how to set up a story for local development. All stories derive from the base %(story_link)s library.') |
+            format(story_link='<a href="https://github.com/pyschool/story">Story</a>') }}
+          </p>
+          <ol>
+          	<li>{{ gettext('Fork/clone/copy the %(hipyschool_link)s or the %(hipy101_link)s repo on Github. Those a good examples of simple stories to begin with.')|
+            format(
+              hipyschool_link='<a href="https://github.com/pyschool/hipyschool">hipyschool</a>',
+              hipy101_link='<a href="https://github.com/sophilabs/py101">py101</a>'
+            ) }}
+          	</li>
+          	<li>
+          		<p>{{ gettext('Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you could set up your copy for local development:') }}
+          		</p>
+          		<pre>$ mkvirtualenv my_python_story
+$ cd my_python_story/
+$ python setup.py develop</pre>
+          	</li>
+          	<li>{{ gettext('Create a module for your <em>Story</em>. For example <code>mystory/__init__.py</code>.') }}
+          		{{ gettext('Define the <code>name</code>, <code>title</code> and <code>adventures</code> variables.') }}
+          		{{ gettext('You will have to use the <code>gettext()</code> function from <code>story.translation</code> to receive translations. More on that below.') }}
+          	</li>
+          	<li>
+          		{{ gettext('Create one or more <em>Adventures</em>. A story is a collection of one or more adventures') }}
+          		<ol>
+          			<li>{{ gettext('Create a module for your adventure for example <code>mystory/myfirstadventure</code>') }}</li>
+          			<li>{{ gettext('Create the <code>README.rst</code> file describing your adventure in the previous folder') }}</li>
+          			<li>{{ gettext('(Optional) Make an Spanish translation. You must name it <code>README.es.rst</code>') }}</li>
+          			<li>{{ gettext('In the <code>__init__.py</code> file define a class called <code>Adventure</code>, that derives from %(baseadventure_link)s.')|
+                      format(baseadventure_link='<a href="https://github.com/pyschool/story/blob/master/story/adventures.py">BaseAdventure</a>') }}
+          			</li>
+          		</ol>
+          	</li>
+          	<li>
+          		<p>{{ gettext('Since the <code>gettext()</code> function relies on %(pybabel_link)s, so you will have to initialize the translation by running:') |
+                  format(pybabel_link='<a href="http://babel.pocoo.org/en/latest/">PyBabel</a>') }}
+          		</p>
+          		<pre>$ make msg-init
+$ make msg-extract</pre>
+          		<p>{{ gettext('You should see several files for each language in <code>mystory/locale/</code> corresponding for the usages of the <code>gettext()</code> function.') }}
+                {{ gettext('If the command fail, try again.') }}
+          		</p>
+          	</li>
+          	<li>
+          		<p>{{ gettext('(Optional) Modify and add translations in the locale files and then run:') }}</p>
+          		<pre>$ make msg</pre>
+          	</li>
+          	<li>
+          		<p>{{ gettext('It is recommended to create some unit tests for checking your solutions, check that your changes pass flake8, tox, and the unit tests:') }}
+          		</p>
+          		<pre>$ flake8 my_python_story tests
+$ python setup.py test or py.test
+$ tox</pre>
+          		<p>{{ gettext('To get flake8 and tox, just pip install them into your virtualenv.') }}</p>
+          	</li>
+          	<li>
+          		<p>{{ gettext('Commit your changes and push your branch to GitHub:') }}</p>
+          		<pre>$ git add .
+$ git commit -m "Your detailed description of your changes."
+$ git push origin</pre>
+          	</li>
+          	<li>
+          		<p>{{ gettext('%(publish_link_prefix)s Publish</a> your package in pip, so it is available publicly ') |
+                format(publish_link_prefix='<a href="http://peterdowns.com/posts/first-time-with-pypi.html">') }}</p>
+          	</li>
+          	<li>{{ gettext('%(letusknow_link_prefix)s Let us know</a> or submit a pull request to the Pyschool GitHub website to update our website to include your story.') |
+                format(letusknow_link_prefix='<a href="https://twitter.com/pyschool">')
+                }}</li>
+          </ol>
+        </section>
+
         <footer>
             <nav>
                 <ul>

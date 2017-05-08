@@ -30,7 +30,7 @@
               Inspired by <a href="https://nodeschool.io/">NodeSchool</a>
             </small>
         </header>
-        <div class="workshops">
+        <section class="workshops">
             <ul>
                 <li>
                     <a href="https://github.com/pyschool/hipyschool">Hi Pyschool</a>
@@ -48,7 +48,82 @@
                     <p>Workshop for learning regular expressions using the commandline.</p>
                 </li>
             </ul>
-        </div>
+        </section>
+
+        <section class="contribute">
+          <h2>Contribute</h2>
+          <p><em>“The only way to learn a new programming language is by writing programs in it.”</em></p>
+          <p>― <a href="https://wikipedia.org/wiki/Dennis_Ritchie">Dennis Ritchie</a></p>
+          <p>Pyschool could always use more stories, whether as specific python features, existing libraries, programming concepts, or even programming concepts not specific to Python itself like event handling, threading and such. New stories
+          	are always welcome :)
+          </p>
+
+          <a name="user-content-get-started"></a>
+          <h3>
+          	<a id="user-content-get-started" class="anchor" href="#get-started" aria-hidden="true">
+          	</a>
+          	Get Started!
+          </h3>
+          <p>Ready to write your story? Here's how to set up a story for local development. All stories derive from the base <a href="https://github.com/pyschool/story">Story</a> library.
+          </p>
+          <ol>
+          	<li>Fork/clone/copy the <a href="https://github.com/pyschool/hipyschool">hipyschool</a> or the <a href="https://github.com/sophilabs/py101">py101</a> repo on Github. Those a good examples of simple stories to begin with.
+          	</li>
+          	<li>
+          		<p>Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you could set up your copy for local development:
+          		</p>
+          		<pre>$ mkvirtualenv my_python_story
+$ cd my_python_story/
+$ python setup.py develop</pre>
+          	</li>
+          	<li>Create a module for your <em>Story</em>. For example <code>mystory/__init__.py</code>.
+          		Define the <code>name</code>, <code>title</code> and <code>adventures</code> variables.
+          		You will have to use the <code>gettext()</code> function from <code>story.translation</code> to receive translations. More on that below.
+          	</li>
+          	<li>
+          		Create one or more <em>Adventures</em>. A story is a collection of one or more adventures
+          		<ol>
+          			<li>Create a module for your adventure for example <code>mystory/myfirstadventure</code></li>
+          			<li>Create the <code>README.rst</code> file describing your adventure in the previous folder</li>
+          			<li>(Optional) Make an Spanish translation. You must name it <code>README.es.rst</code></li>
+          			<li>In the <code>__init__.py</code> file define a class called <code>Adventure</code>, that derives from <a href="https://github.com/pyschool/story/blob/master/story/adventures.py">BaseAdventure</a>.
+          			</li>
+          		</ol>
+          	</li>
+          	<li>
+          		<p>Since the <code>gettext()</code> function relies on <a href="http://babel.pocoo.org/en/latest/">PyBabel</a>, so you will have to initialize the translation by running:
+          		</p>
+          		<pre>$ make msg-init
+$ make msg-extract</pre>
+          		<p>You should see several files for each language in <code>mystory/locale/</code> corresponding for the usages of the <code>gettext()</code> function.
+                If the command fail, try again.
+          		</p>
+          	</li>
+          	<li>
+          		<p>(Optional) Modify and add translations in the locale files and then run:</p>
+          		<pre>$ make msg</pre>
+          	</li>
+          	<li>
+          		<p>It is recommended to create some unit tests for checking your solutions, check that your changes pass flake8, tox, and the unit tests:
+          		</p>
+          		<pre>$ flake8 my_python_story tests
+$ python setup.py test or py.test
+$ tox</pre>
+          		<p>To get flake8 and tox, just pip install them into your virtualenv.</p>
+          	</li>
+          	<li>
+          		<p>Commit your changes and push your branch to GitHub:</p>
+          		<pre>$ git add .
+$ git commit -m "Your detailed description of your changes."
+$ git push origin</pre>
+          	</li>
+          	<li>
+          		<p><a href="http://peterdowns.com/posts/first-time-with-pypi.html"> Publish</a> your package in pip, so it is available publicly </p>
+          	</li>
+          	<li><a href="https://twitter.com/pyschool"> Let us know</a> or submit a pull request to the Pyschool GitHub website to update our website to include your story.</li>
+          </ol>
+        </section>
+
         <footer>
             <nav>
                 <ul>

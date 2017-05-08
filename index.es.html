@@ -19,8 +19,8 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">[Inglés]</a></li>
-                    <li><a href="index.es.html">Español</a></li>
+                    <li><a href="index.html">Inglés</a></li>
+                    <li><a href="index.es.html">[Español]</a></li>
                 </ul>
             </nav>
             <div class="logo"></div>
@@ -30,7 +30,7 @@
               Inspirado por <a href="https://nodeschool.io/">NodeSchool</a>
             </small>
         </header>
-        <div class="workshops">
+        <section class="workshops">
             <ul>
                 <li>
                     <a href="https://github.com/pyschool/hipyschool">Hi Pyschool</a>
@@ -48,7 +48,81 @@
                     <p>Taller para aprender expresiones regulares usando la línea de comando. Disponible en Inglés solamente</p>
                 </li>
             </ul>
-        </div>
+        </section>
+
+        <section class="contribute">
+          <h2>Contribuye</h2>
+          <p><em>“La única forma de aprender un nuevo lenguaje de programación esescribiendo programas en él.”</em></p>
+          <p>― <a href="https://wikipedia.org/wiki/Dennis_Ritchie">Dennis Ritchie</a></p>
+          <p>A Pyschool le vendría genial nuevos talleres, ya sea de temas específicos de Python, bibilotecas ya existentes, conceptos de progración, o aún otros conceptos que no son específicos de Python como manejo de eventos, hilos, por nombrar algunos. Nuevos talleres siempre son bienvenidos :)
+          </p>
+
+          <a name="user-content-get-started"></a>
+          <h3>
+          	<a id="user-content-get-started" class="anchor" href="#get-started" aria-hidden="true">
+          	</a>
+          	¡Comienza!
+          </h3>
+          <p>¿Estás pronto para escribir tu taller? Aquí se muestra como configurar un ambiente local de desarrollo. Todos los talleres derivan de la biblioteca <a href="https://github.com/pyschool/story">Story</a>.
+          </p>
+          <ol>
+          	<li>Forkea, clona o copia los repositores de <a href="https://github.com/pyschool/hipyschool">hipyschool</a> o <a href="https://github.com/sophilabs/py101">py101</a>. Son dos buenos ejemplos de talleres para comenzar.
+          	</li>
+          	<li>
+          		<p>Enlaza tu copia local a un <code>virtualenv</code>. Asumiendo que tienes virtualenvwrapper instalaldo, puedes inicializar tu copia local para desarrollo de la siguiente manera:
+          		</p>
+          		<pre>$ mkvirtualenv my_python_story
+$ cd my_python_story/
+$ python setup.py develop</pre>
+          	</li>
+          	<li>Crea un módulo para tu clase <em>Story</em>. Por ejemplo <code>mystory/__init__.py</code>.
+          		Define los atributos <code>name</code>, <code>title</code> and <code>adventures</code>.
+          		Deberás usar la función <code>gettext()</code> del módulo <code>story.translation</code> para recibir traducciones. Más abajo se tratará con detenimiento.
+          	</li>
+          	<li>
+          		Crea una o más <em>Aventuras</em>. Un taller es una colección de una o más aventuras
+          		<ol>
+          			<li>Crea un módulo con tu aventura. Por ejemplo <code>mystory/myfirstadventure</code></li>
+          			<li>Crea el archivo <code>README.rst</code> conteniendo tu aventura</li>
+          			<li>Haz una traducción a español. Debes de llamarla <code>README.es.rst</code></li>
+          			<li>Define una clase llamada <code>Adventure</code> e
+          			</li>
+          		</ol>
+          	</li>
+          	<li>
+          		<p>Debido a que la función <code>gettext()</code> depende de  <a href="http://babel.pocoo.org/en/latest/">PyBabel</a>, por lo tanto debes inicializar las traducciones ejecutando:
+          		</p>
+          		<pre>$ make msg-init
+$ make msg-extract</pre>
+          		<p>Deberías ver varios archivos en la carpeta <code>mystory/locale/</code>, correspondientes a los usos de la función <code>gettext()</code>
+                Si el comando falla, intenta nuevamente.
+          		</p>
+          	</li>
+          	<li>
+          		<p>(Opcional) Modifica y agrega traducciones in los archivos de la carpeta <code>locale</code>, y luego ejecuta.</p>
+          		<pre>$ make msg</pre>
+          	</li>
+          	<li>
+          		<p>Es recomendado crear algunos test unitarios para verificar tus soluciones, verifica que tus cambios pasen flak8, tox, así como los tests unitarios:
+          		</p>
+          		<pre>$ flake8 my_python_story tests
+$ python setup.py test or py.test
+$ tox</pre>
+          		<p>Para obtener flake8 y tox, solo corre <code>pip install </code> en tu virtualenv.</p>
+          	</li>
+          	<li>
+          		<p>Comitea tus cambios y haz un push de tu branch a GitHub:</p>
+          		<pre>$ git add .
+$ git commit -m "Your detailed description of your changes."
+$ git push origin</pre>
+          	</li>
+          	<li>
+          		<p><a href="http://peterdowns.com/posts/first-time-with-pypi.html"> Publica</a> tu paquete en pip, para que esté disponible públicamente.</p>
+          	</li>
+          	<li><a href="https://twitter.com/pyschool"> Háznos saber</a> or haz un pull request al sitio de Pyschool en GitHub.</li>
+          </ol>
+        </section>
+
         <footer>
             <nav>
                 <ul>

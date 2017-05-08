@@ -10,6 +10,7 @@ all: $(TARGET_FILES)
 clean:
 	rm -f `find -name messages.mo`
 	rm -f $(TARGET_FILES)
+	rm -f index.en.html
 
 # Translations template
 locale/pyschool.pot: $(TEMPLATES)

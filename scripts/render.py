@@ -3,6 +3,7 @@ import argparse
 import gettext
 from jinja2 import Environment, FileSystemLoader
 
+
 def __build_parser():
     parser = argparse.ArgumentParser(
         description='Render template using jinja2'
@@ -15,7 +16,7 @@ def __build_parser():
     )
     parser.add_argument(
         '--language',
-        dest='accumulate',
+        dest='language',
         default='en',
         help='Langage to translate',
         choices=['es', 'en']
@@ -23,7 +24,7 @@ def __build_parser():
     return parser
 
 
-def __build_jinja_env():
+def __build_jinja_env(language):
     template_path = os.path.join(
         os.path.dirname(__file__),
         '..',
@@ -36,7 +37,11 @@ def __build_jinja_env():
         'locale'
     )
 
-    translations = gettext.translation('messages', locale_path)
+    translations = gettext.translation(
+        'messages',
+        locale_path,
+        languages=[language]
+    )
 
     env = Environment(
         loader=FileSystemLoader(template_path),
@@ -50,9 +55,9 @@ def __build_jinja_env():
 
 def main():
     parser = __build_parser()
-    env = __build_jinja_env()
-
     args = parser.parse_args()
+    env = __build_jinja_env(args.language)
+
     template = env.get_template(args.template)
     print(template.render())
 

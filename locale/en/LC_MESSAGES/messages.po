@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-08 17:07-0300\n"
+"POT-Creation-Date: 2017-05-08 19:21-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -48,17 +48,17 @@ msgstr ""
 msgid "Workshop for learning regular expressions using the commandline."
 msgstr ""
 
-#: templates/index.html:57 templates/index.html:143
+#: templates/index.html:59 templates/index.html:164
 msgid "Contribute"
 msgstr ""
 
-#: templates/index.html:58
+#: templates/index.html:61
 msgid ""
 "The only way to learn a new programming language is by writing programs "
 "in it."
 msgstr ""
 
-#: templates/index.html:60
+#: templates/index.html:63
 msgid ""
 "Pyschool could always use more stories, whether as specific python "
 "features, existing libraries, programming concepts, or even programming "
@@ -67,133 +67,158 @@ msgid ""
 "          \tare always welcome :)"
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:71
 msgid "Get Started!"
 msgstr ""
 
-#: templates/index.html:70
+#: templates/index.html:73
 #, python-format
 msgid ""
 "Ready to write your story? Here's how to set up a story for local "
 "development. All stories derive from the base %(story_link)s library."
 msgstr ""
 
-#: templates/index.html:74
+#: templates/index.html:77
 #, python-format
 msgid ""
 "Fork/clone/copy the %(hipyschool_link)s or the %(hipy101_link)s repo on "
 "Github. Those a good examples of simple stories to begin with."
 msgstr ""
 
-#: templates/index.html:81
+#: templates/index.html:84
 msgid ""
 "Install your local copy into a virtualenv. Assuming you have "
 "virtualenvwrapper installed, this is how you could set up your copy for "
 "local development:"
 msgstr ""
 
-#: templates/index.html:87
+#: templates/index.html:90
 msgid ""
 "Create a module for your <em>Story</em>. For example "
 "<code>mystory/__init__.py</code>."
 msgstr ""
 
-#: templates/index.html:88
+#: templates/index.html:91
 msgid ""
 "Define the <code>name</code>, <code>title</code> and "
 "<code>adventures</code> variables."
 msgstr ""
 
-#: templates/index.html:89
+#: templates/index.html:92
 msgid ""
 "You will have to use the <code>gettext()</code> function from "
 "<code>story.translation</code> to receive translations. More on that "
 "below."
 msgstr ""
 
-#: templates/index.html:92
+#: templates/index.html:95
 msgid ""
 "Create one or more <em>Adventures</em>. A story is a collection of one or"
 " more adventures"
 msgstr ""
 
-#: templates/index.html:94
+#: templates/index.html:97
 msgid ""
 "Create a module for your adventure for example "
 "<code>mystory/myfirstadventure</code>"
 msgstr ""
 
-#: templates/index.html:95
+#: templates/index.html:98
 msgid ""
 "Create the <code>README.rst</code> file describing your adventure in the "
 "previous folder"
 msgstr ""
 
-#: templates/index.html:96
+#: templates/index.html:99
 msgid ""
 "(Optional) Make an Spanish translation. You must name it "
 "<code>README.es.rst</code>"
 msgstr ""
 
-#: templates/index.html:97
+#: templates/index.html:100
 #, python-format
 msgid ""
 "In the <code>__init__.py</code> file define a class called "
 "<code>Adventure</code>, that derives from %(baseadventure_link)s."
 msgstr ""
 
-#: templates/index.html:103
+#: templates/index.html:106
 #, python-format
 msgid ""
 "Since the <code>gettext()</code> function relies on %(pybabel_link)s, so "
 "you will have to initialize the translation by running:"
 msgstr ""
 
-#: templates/index.html:108
+#: templates/index.html:111
 msgid ""
 "You should see several files for each language in "
 "<code>mystory/locale/</code> corresponding for the usages of the "
 "<code>gettext()</code> function."
 msgstr ""
 
-#: templates/index.html:109
+#: templates/index.html:112
 msgid "If the command fail, try again."
 msgstr ""
 
-#: templates/index.html:113
+#: templates/index.html:116
 msgid "(Optional) Modify and add translations in the locale files and then run:"
 msgstr ""
 
-#: templates/index.html:117
+#: templates/index.html:120
 msgid ""
 "It is recommended to create some unit tests for checking your solutions, "
 "check that your changes pass flake8, tox, and the unit tests:"
 msgstr ""
 
-#: templates/index.html:122
+#: templates/index.html:125
 msgid "To get flake8 and tox, just pip install them into your virtualenv."
 msgstr ""
 
-#: templates/index.html:125
+#: templates/index.html:128
 msgid "Commit your changes and push your branch to GitHub:"
 msgstr ""
 
-#: templates/index.html:131
+#: templates/index.html:134
 #, python-format
 msgid ""
 "%(publish_link_prefix)s Publish</a> your package in pip, so it is "
 "available publicly "
 msgstr ""
 
-#: templates/index.html:134
+#: templates/index.html:137
 #, python-format
 msgid ""
 "%(letusknow_link_prefix)s Let us know</a> or submit a pull request to the"
 " Pyschool GitHub website to update our website to include your story."
 msgstr ""
 
-#: templates/index.html:145
+#: templates/index.html:144 templates/index.html:166
 msgid "Organize"
+msgstr ""
+
+#: templates/index.html:148
+msgid ""
+"Education is for improving the lives of others and for leaving your "
+"community and world better than you found it"
+msgstr ""
+
+#: templates/index.html:151
+#, python-format
+msgid ""
+"PySchool is a fully community driven effort and is 100% open source. This"
+" means that anyone can use the PySchool materials and/or host an event. "
+"There's a lot of flexibility in the specifics of running a NodeSchool "
+"event. The only expectations for event hosts is that events be not-for-"
+"profit (free or low cost) and that governance of events should have an "
+"open membership model."
+msgstr ""
+
+#: templates/index.html:153
+#, python-format
+msgid ""
+"To ask and answer questions about authoring Pyschool content, check out "
+"our %(pyschool_link)s discussion group. Don't hesitate to send us an "
+"%(email_link)s if you can't find the answer you're looking for."
 msgstr ""
 
 #~ msgid ""
@@ -288,5 +313,27 @@ msgstr ""
 #~ " check that your changes pass flake8"
 #~ " and the tests, including testing "
 #~ "other Python versions with tox:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PySchool is a fully community driven "
+#~ "effort and is 100% open source. "
+#~ "This means that anyone can use the"
+#~ " PySchool materials and/or host an "
+#~ "event. The only expectations for event"
+#~ " hosts is that events be not-"
+#~ "for-profit (free or low cost) and "
+#~ "that governance of events should have"
+#~ " an open membership model."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Pyschool could always use more stories,"
+#~ " whether as specific python features, "
+#~ "existing libraries, programming concepts, or"
+#~ " even programming concepts not specific "
+#~ "to Python itself like event handling,"
+#~ " threading and such. New stories\n"
+#~ "           are always welcome :)"
 #~ msgstr ""
 

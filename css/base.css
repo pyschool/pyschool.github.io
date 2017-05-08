@@ -4,6 +4,10 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+h2 {
+  text-align: center;
+}
+
 header {
     background-color: #eee;
     padding: 30px;

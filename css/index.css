@@ -1,7 +1,7 @@
 header .logo {
     margin: 5vh 0 0 0;
     height: 30vh;
-    background: transparent url('../img/logo.png') no-repeat center center;
+    background: transparent url('../img/logo.svg') no-repeat center center;
     background-size: contain;
 }
 
@@ -22,7 +22,7 @@ header small {
     text-align: center;
 }
 
-.workshops, .contribute {
+.workshops, .contribute, .organize {
     padding: 0;
     margin: 40px auto;
     max-width: 600px;
@@ -62,4 +62,18 @@ header small {
     padding: 10px;
     background-color: #eee;
     display: block;
+}
+
+.organize-logo {
+    margin: 5vh 0 0 0;
+    height: 30vh;
+    background: transparent url('../img/people.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.contribute-logo {
+    margin: 5vh 0 0 0;
+    height: 30vh;
+    background: transparent url('../img/launch.svg') no-repeat center center;
+    background-size: contain;
 }

@@ -13,7 +13,7 @@ clean:
 
 # Translations template
 locale/pyschool.pot: $(TEMPLATES)
-	pybabel extract -F babel.cfg -o $(POT_FILE) $(TEMPLATES)
+	pybabel extract -F babel.cfg --omit-header -o $(POT_FILE) $(TEMPLATES)
 
 # (Source) translations
 locale/%/LC_MESSAGES/messages.po: $(POT_FILE)
@@ -25,7 +25,7 @@ locale/%/LC_MESSAGES/messages.mo: locale/%/LC_MESSAGES/messages.po
 
 # Localized target files
 index.%.html: $(TEMPLATES) locale/%/LC_MESSAGES/messages.mo
-	python scripts/render.py index.html --language $* > index.$*.html
+	python scripts/render.py index.html --language $* --output index.$*.html
 
 # English target file
 index.html: index.en.html

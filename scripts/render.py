@@ -1,7 +1,10 @@
+"""Renders a jinja template to a particular file"""
 import os.path
 import argparse
 import gettext
+import sys
 from jinja2 import Environment, FileSystemLoader
+from jinja2.exceptions import TemplateSyntaxError
 
 
 def __build_parser():
@@ -17,26 +20,22 @@ def __build_parser():
     parser.add_argument(
         '--language',
         dest='language',
-        default='en',
         help='Langage to translate',
-        choices=['es', 'en']
+        choices=['es', 'en'],
+        required=True
+    )
+    parser.add_argument(
+        '--output',
+        dest='output',
+        help='Output File',
+        required=True
     )
     return parser
 
 
 def __build_jinja_env(language):
-    template_path = os.path.join(
-        os.path.dirname(__file__),
-        '..',
-        'templates'
-    )
-
-    locale_path = os.path.join(
-        os.path.dirname(__file__),
-        '..',
-        'locale'
-    )
-
+    template_path = os.path.join(os.path.dirname(__file__), '..', 'templates')
+    locale_path = os.path.join(os.path.dirname(__file__), '..', 'locale')
     translations = gettext.translation(
         'messages',
         locale_path,
@@ -54,12 +53,26 @@ def __build_jinja_env(language):
 
 
 def main():
+    """Renders a jinja template to a particular file"""
     parser = __build_parser()
     args = parser.parse_args()
     env = __build_jinja_env(args.language)
 
-    template = env.get_template(args.template)
-    print(template.render())
+    try:
+        template = env.get_template(args.template)
+    except TemplateSyntaxError as ex:
+        print(
+            "SyntaxError on template {}: Line {}: {}".format(
+                ex.name,
+                ex.lineno,
+                ex.message
+            ),
+            file=sys.stderr
+        )
+        sys.exit(1)
+
+    with open(args.output, 'w') as outfile:
+        outfile.write(template.render())
 
 
 if __name__ == '__main__':

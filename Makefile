@@ -14,7 +14,8 @@ clean:
 
 # Translations template
 locale/pyschool.pot: $(TEMPLATES)
-	pybabel extract -F babel.cfg --omit-header -o $(POT_FILE) $(TEMPLATES)
+	python scripts/check.py index.html
+	pybabel extract -F babel.cfg -o $(POT_FILE) $(TEMPLATES)
 
 # (Source) translations
 locale/%/LC_MESSAGES/messages.po: $(POT_FILE)
@@ -31,3 +32,12 @@ index.%.html: $(TEMPLATES) locale/%/LC_MESSAGES/messages.mo
 # English target file
 index.html: index.en.html
 	cp index.en.html index.html
+
+# Used for local development along with livereload
+watch:
+	python -m http.server 8000 &
+	livereload . -w 2 &
+	while true; do \
+		make all; \
+		inotifywait -qre close_write locale templates; \
+	done

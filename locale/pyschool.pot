@@ -27,15 +27,11 @@ msgstr ""
 msgid "Workshop for learning regular expressions using the commandline."
 msgstr ""
 
-#: templates/index.html:55
-msgid "Learn Django [work in progress]."
-msgstr ""
-
-#: templates/index.html:63
+#: templates/index.html:58
 msgid "Contribute"
 msgstr ""
 
-#: templates/index.html:65
+#: templates/index.html:60
 msgid "Organize"
 msgstr ""
 

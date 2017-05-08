@@ -52,8 +52,7 @@ def __build_jinja_env(language):
     return env
 
 
-def main():
-    """Renders a jinja template to a particular file"""
+def __main():
     parser = __build_parser()
     args = parser.parse_args()
     env = __build_jinja_env(args.language)
@@ -76,4 +75,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    __main()

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-08 13:16-0300\n"
+"POT-Creation-Date: 2017-05-08 14:31-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -48,15 +48,14 @@ msgstr ""
 msgid "Workshop for learning regular expressions using the commandline."
 msgstr ""
 
-#: templates/index.html:55
-msgid "Learn Django [work in progress]."
-msgstr ""
-
-#: templates/index.html:63
+#: templates/index.html:58
 msgid "Contribute"
 msgstr ""
 
-#: templates/index.html:65
+#: templates/index.html:60
 msgid "Organize"
 msgstr ""
+
+#~ msgid "Learn Django [work in progress]."
+#~ msgstr ""
 

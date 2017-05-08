@@ -22,7 +22,7 @@ header small {
     text-align: center;
 }
 
-.workshops {
+.workshops, .contribute {
     padding: 0;
     margin: 40px auto;
     max-width: 600px;

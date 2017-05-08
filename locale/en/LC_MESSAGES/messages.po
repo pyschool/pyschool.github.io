@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-05 20:18-0300\n"
-"PO-Revision-Date: 2017-05-05 20:02-0300\n"
+"POT-Creation-Date: 2017-05-08 13:02-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -18,7 +19,80 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
 
+#: templates/index.html:22
+msgid "English"
+msgstr ""
+
+#: templates/index.html:23
+msgid "Spanish"
+msgstr ""
+
 #: templates/index.html:28
 msgid "Stories to learn Python stuff."
 msgstr ""
+
+#: templates/index.html:31
+#, python-format
+msgid "Inspired by %(nodeschool_link)s"
+msgstr ""
+
+#: templates/index.html:41
+msgid "Sample story (fork or copy to create your own story)."
+msgstr ""
+
+#: templates/index.html:46
+msgid "A Pyschool story for learning python essentials."
+msgstr ""
+
+#: templates/index.html:51
+msgid "Workshop for learning regular expressions using the commandline."
+msgstr ""
+
+#: templates/index.html:55
+msgid "Learn Django [work in progress]."
+msgstr ""
+
+#: templates/index.html:63
+msgid "Contribute"
+msgstr ""
+
+#: templates/index.html:65
+msgid "Organize"
+msgstr ""
+
+#~ msgid "Inspired by %(nodeschool_link)"
+#~ msgstr "Inspirado por %(nodeschool_link)"
+
+#~ msgid "Inspired by %(link)"
+#~ msgstr ""
+
+#~ msgid "English"
+#~ msgstr ""
+
+#~ msgid "Spanish"
+#~ msgstr ""
+
+#~ msgid "Stories to learn Python stuff."
+#~ msgstr ""
+
+#~ msgid "Inspired by {}"
+#~ msgstr ""
+
+#~ msgid "Sample story (fork or copy to create your own story)."
+#~ msgstr ""
+
+#~ msgid "A Pyschool story for learning python essentials."
+#~ msgstr ""
+
+#~ msgid "Workshop for learning regular expressions using the commandline."
+#~ msgstr ""
+
+#~ msgid "Learn Django [work in progress]."
+#~ msgstr ""
+
+#~ msgid "Contribute"
+#~ msgstr ""
+
+#~ msgid "Organize"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-09 17:20-0300\n"
+"POT-Creation-Date: 2017-05-09 18:13-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,32 +19,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
 
-#: templates/index.html:22
+#: templates/index.html:20
 msgid "[English]"
 msgstr "[English]"
 
-#: templates/index.html:23
+#: templates/index.html:21
 msgid "[Spanish]"
 msgstr "Spanish"
 
-#: templates/index.html:28
+#: templates/index.html:26
 msgid "Stories to learn Python stuff."
 msgstr ""
 
-#: templates/index.html:31
+#: templates/index.html:29
 #, python-format
 msgid "Inspired by %(nodeschool_link)s"
 msgstr ""
 
-#: templates/index.html:41
+#: templates/index.html:39
 msgid "Sample story (fork or copy to create your own story)."
 msgstr ""
 
-#: templates/index.html:46
+#: templates/index.html:44
 msgid "A Pyschool story for learning python essentials."
 msgstr ""
 
-#: templates/index.html:51
+#: templates/index.html:49
 msgid "Workshop for learning regular expressions using the commandline."
 msgstr ""
 

@@ -82,24 +82,25 @@ header small {
 }
 
 .try-logo {
-    margin: 5vh 0 0 0;
-    height: 30vh;
-    background: transparent url('../img/play.svg') no-repeat center center;
+    margin: 5vh 0;
+    height: 20vh;
+    background: transparent url('../img/try.png') no-repeat center center;
     background-size: contain;
 }
 
 .terminal-shell {
+    background-color: #eee;
     font-size: 17px;
     line-height: 28px;
-    color: #eeeb82;
-    background-color: #3d3d3d;
+    display: block;
     overflow: hidden;
-    padding: 20px;
+    padding: 10px 20px 0;
     margin: 0;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    text-align: left;
-    display: block;
+    border: 1px solid #000;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .terminal-path:before {
@@ -115,15 +116,11 @@ header small {
 }
 
 .terminal-header {
+  background-color: #3379b3;
   height: 25px;
   display: block;
-  background: linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
-  background-color: #f7f7f7;
-  border: 1px solid #9c9c9c;
-  border-bottom-color: #111;
+  border: 1px solid #000;
+  border-bottom-width: 0;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  text-align: center;
-  font-size: 13px;
-  line-height: 25px;
 }

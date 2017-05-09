@@ -22,7 +22,7 @@ header small {
     text-align: center;
 }
 
-.workshops, .contribute, .organize {
+.workshops, .contribute, .organize, .try {
     padding: 0;
     margin: 40px auto;
     max-width: 600px;
@@ -76,4 +76,44 @@ header small {
     height: 30vh;
     background: transparent url('../img/launch.svg') no-repeat center center;
     background-size: contain;
+}
+
+.terminal-shell {
+    font-size: 17px;
+    line-height: 28px;
+    color: #eeeb82;
+    background-color: #3d3d3d;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align: left;
+    display: block;
+}
+
+.terminal-path:before {
+    content: "~";
+    color: #71cfee;
+    margin-right: 10px;
+}
+
+.terminal-prompt:before {
+    content: "$";
+    color: #d74d52;
+    margin-right: 10px;
+}
+
+.terminal-header {
+  height: 25px;
+  display: block;
+  background: linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
+  background-color: #f7f7f7;
+  border: 1px solid #9c9c9c;
+  border-bottom-color: #111;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 25px;
 }

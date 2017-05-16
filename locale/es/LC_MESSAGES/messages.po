@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-08 13:16-0300\n"
+"POT-Creation-Date: 2017-05-09 18:13-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -19,46 +19,274 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
 
-#: templates/index.html:22
-msgid "English"
+#: templates/index.html:20
+msgid "[English]"
 msgstr "Inglés"
 
-#: templates/index.html:23
-msgid "Spanish"
-msgstr "Español"
+#: templates/index.html:21
+msgid "[Spanish]"
+msgstr "[Español]"
 
-#: templates/index.html:28
+#: templates/index.html:26
 msgid "Stories to learn Python stuff."
 msgstr "Talleres para aprender Python."
 
-#: templates/index.html:31
+#: templates/index.html:29
 #, python-format
 msgid "Inspired by %(nodeschool_link)s"
 msgstr "Inspirado por %(nodeschool_link)s"
 
-#: templates/index.html:41
+#: templates/index.html:39
 msgid "Sample story (fork or copy to create your own story)."
 msgstr "Taller de muestra (forkear o copiar para crear uno propio)."
 
-#: templates/index.html:46
+#: templates/index.html:44
 msgid "A Pyschool story for learning python essentials."
 msgstr "Una historia de Pyschool para aprender los conceptos esenciales de Python."
 
-#: templates/index.html:51
+#: templates/index.html:49
 msgid "Workshop for learning regular expressions using the commandline."
 msgstr ""
 "Taller para aprender expresiones regulares usando la línea de comando. "
 "Disponible en Inglés solamente"
 
-#: templates/index.html:55
-msgid "Learn Django [work in progress]."
-msgstr "Aprende Django [trabajo en progreso]."
+#: templates/index.html:95 templates/index.html:224
+msgid "Organize"
+msgstr "Organiza"
 
-#: templates/index.html:63
+#: templates/index.html:99
+msgid ""
+"Education is for improving the lives of others and for leaving your "
+"community and world better than you found it"
+msgstr ""
+"La educación es para mejorar las vidas de otros y para dejar tu comunidad"
+" en un mejor estado de la que la encontraste"
+
+#: templates/index.html:102
+#, python-format
+msgid ""
+"PySchool is a fully community driven effort and is 100% open source. This"
+" means that anyone can use the PySchool materials and/or host an event. "
+"There's a lot of flexibility in the specifics of running a PySchool "
+"event. The only expectations for event hosts is that events be not-for-"
+"profit (free or low cost) and that governance of events should have an "
+"open membership model."
+msgstr ""
+"Pyschool es un efuerzo totalmente llevado a cabo por la comunidad y es "
+"100% open source. Esto quiere decir que cuaquier persona puede usar "
+"material de Pyschool, u organizar un evento. Esto da un montón de "
+"flexibilidad a la hora de ser anfritrión un evento de Pyschool. La único "
+"que se espera de los anfitriones es que los eventos no sean con fines de "
+"lucro, y que el modelo de membrecía para participar en ellos sea abierto."
+
+#: templates/index.html:104
+#, python-format
+msgid ""
+"To ask and answer questions about authoring Pyschool content, check out "
+"our %(pyschool_link)s discussion group. Don't hesitate to send us an "
+"%(email_link)s if you can't find the answer you're looking for."
+msgstr ""
+"Para preguntar y contestar preguntas acerca de la autoría de contenido "
+"para Pyschool, visita nuestro grupo de discusión de %(pyschool_link)s. No"
+" dudes en mandar un %(email_link)s si no encuentras la respuesta para lo "
+"que buscas."
+
+#: templates/index.html:133 templates/index.html:222
 msgid "Contribute"
 msgstr "Contribuye"
 
-#: templates/index.html:65
-msgid "Organize"
-msgstr "Organiza"
+#: templates/index.html:137
+msgid ""
+"The only way to learn a new programming language is by writing programs "
+"in it."
+msgstr ""
+"La única forma de aprender un nuevo lenguaje de programación "
+"esescribiendo programas en él."
+
+#: templates/index.html:139
+msgid ""
+"Pyschool could always use more stories, whether as specific python "
+"features, existing libraries, programming concepts, or even programming "
+"concepts not specific to Python itself like event handling, threading and"
+" such. New stories\n"
+"           are always welcome :)"
+msgstr ""
+
+#: templates/index.html:147
+msgid "Get Started!"
+msgstr "¡Comienza!"
+
+#: templates/index.html:149
+#, python-format
+msgid ""
+"Ready to write your story? Here's how to set up a story for local "
+"development. All stories derive from the base %(story_link)s library."
+msgstr ""
+"¿Estás pronto para escribir tu taller? Aquí se muestra como configurar un"
+" ambiente local de desarrollo. Todos los talleres derivan de la "
+"biblioteca %(story_link)s."
+
+#: templates/index.html:153
+#, python-format
+msgid ""
+"Fork/clone/copy the %(hipyschool_link)s or the %(hipy101_link)s repo on "
+"Github. Those a good examples of simple stories to begin with."
+msgstr ""
+"Forkea, clona o copia los repositores de %(hipyschool_link)s o "
+"%(hipy101_link)s. Son dos buenos ejemplos de talleres para comenzar."
+
+#: templates/index.html:160
+msgid ""
+"Install your local copy into a virtualenv. Assuming you have "
+"virtualenvwrapper installed, this is how you could set up your copy for "
+"local development:"
+msgstr ""
+"Enlaza tu copia local a un <code>virtualenv</code>. Asumiendo que tienes "
+"virtualenvwrapper instalaldo, puedes inicializar tu copia local para "
+"desarrollo de la siguiente manera:"
+
+#: templates/index.html:166
+msgid ""
+"Create a module for your <em>Story</em>. For example "
+"<code>mystory/__init__.py</code>."
+msgstr ""
+"Crea un módulo para tu clase <em>Story</em>. Por ejemplo "
+"<code>mystory/__init__.py</code>."
+
+#: templates/index.html:167
+msgid ""
+"Define the <code>name</code>, <code>title</code> and "
+"<code>adventures</code> variables."
+msgstr ""
+"Define los atributos <code>name</code>, <code>title</code> and "
+"<code>adventures</code>."
+
+#: templates/index.html:168
+msgid ""
+"You will have to use the <code>gettext()</code> function from "
+"<code>story.translation</code> to receive translations. More on that "
+"below."
+msgstr ""
+"Deberás usar la función <code>gettext()</code> del módulo "
+"<code>story.translation</code> para recibir traducciones. Más abajo se "
+"tratará con detenimiento."
+
+#: templates/index.html:171
+msgid ""
+"Create one or more <em>Adventures</em>. A story is a collection of one or"
+" more adventures"
+msgstr ""
+"Crea una o más <em>Aventuras</em>. Un taller es una colección de una o "
+"más aventuras"
+
+#: templates/index.html:173
+msgid ""
+"Create a module for your adventure for example "
+"<code>mystory/myfirstadventure</code>"
+msgstr ""
+"Crea un módulo con tu aventura. Por ejemplo "
+"<code>mystory/myfirstadventure</code>"
+
+#: templates/index.html:174
+msgid ""
+"Create the <code>README.rst</code> file describing your adventure in the "
+"previous folder"
+msgstr "Crea el archivo <code>README.rst</code> conteniendo tu aventura"
+
+#: templates/index.html:175
+msgid ""
+"(Optional) Make an Spanish translation. You must name it "
+"<code>README.es.rst</code>"
+msgstr "Haz una traducción a español. Debes de llamarla <code>README.es.rst</code>"
+
+#: templates/index.html:176
+#, python-format
+msgid ""
+"In the <code>__init__.py</code> file define a class called "
+"<code>Adventure</code>, that derives from %(baseadventure_link)s."
+msgstr "Define una clase llamada <code>Adventure</code> e"
+
+#: templates/index.html:182
+#, python-format
+msgid ""
+"Since the <code>gettext()</code> function relies on %(pybabel_link)s, so "
+"you will have to initialize the translation by running:"
+msgstr ""
+"Debido a que la función <code>gettext()</code> depende de  "
+"%(pybabel_link)s, por lo tanto debes inicializar las traducciones "
+"ejecutando:"
+
+#: templates/index.html:187
+msgid ""
+"You should see several files for each language in "
+"<code>mystory/locale/</code> corresponding for the usages of the "
+"<code>gettext()</code> function."
+msgstr ""
+"Deberías ver varios archivos en la carpeta <code>mystory/locale/</code>, "
+"correspondientes a los usos de la función <code>gettext()</code>"
+
+#: templates/index.html:188
+msgid "If the command fail, try again."
+msgstr "Si el comando falla, intenta nuevamente."
+
+#: templates/index.html:192
+msgid "(Optional) Modify and add translations in the locale files and then run:"
+msgstr ""
+"(Opcional) Modifica y agrega traducciones in los archivos de la carpeta "
+"<code>locale</code>, y luego ejecuta."
+
+#: templates/index.html:196
+msgid ""
+"It is recommended to create some unit tests for checking your solutions, "
+"check that your changes pass flake8, tox, and the unit tests:"
+msgstr ""
+"Es recomendado crear algunos test unitarios para verificar tus "
+"soluciones, verifica que tus cambios pasen flak8, tox, así como los tests"
+" unitarios:"
+
+#: templates/index.html:201
+msgid "To get flake8 and tox, just pip install them into your virtualenv."
+msgstr ""
+"Para obtener flake8 y tox, solo corre <code>pip install </code> en tu "
+"virtualenv."
+
+#: templates/index.html:204
+msgid "Commit your changes and push your branch to GitHub:"
+msgstr "Comitea tus cambios y haz un push de tu branch a GitHub:"
+
+#: templates/index.html:210
+#, python-format
+msgid ""
+"%(publish_link_prefix)s Publish</a> your package in pip, so it is "
+"available publicly "
+msgstr ""
+"%(publish_link_prefix)s Publica</a> tu paquete en pip, para que esté "
+"disponible públicamente."
+
+#: templates/index.html:213
+#, python-format
+msgid ""
+"%(letusknow_link_prefix)s Let us know</a> or submit a pull request to the"
+" Pyschool GitHub website to update our website to include your story."
+msgstr ""
+"%(letusknow_link_prefix)s Háznos saber</a> or haz un pull request al "
+"sitio de Pyschool en GitHub."
+
+#~ msgid ""
+#~ "Pyschool could always use more stories,"
+#~ " whether as specific python features, "
+#~ "existing libraries, programming concepts, or"
+#~ " even programming concepts not specific "
+#~ "to Python itself like event handling,"
+#~ " threading and such. New stories\n"
+#~ "          \tare always welcome :)"
+#~ msgstr ""
+#~ "A Pyschool le vendría genial nuevos "
+#~ "talleres, ya sea de temas específicos"
+#~ " de Python, bibilotecas ya existentes, "
+#~ "conceptos de progración, o aún otros "
+#~ "conceptos que no son específicos de "
+#~ "Python como manejo de eventos, hilos,"
+#~ " por nombrar algunos. Nuevos talleres "
+#~ "siempre son bienvenidos :)"
 

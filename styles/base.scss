@@ -4,6 +4,14 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+h2 {
+  text-align: center;
+}
+
+pre {
+  font-size: 12px;
+}
+
 header {
     background-color: #eee;
     padding: 30px;
@@ -61,4 +69,8 @@ footer nav ul li a {
     display: block;
     text-decoration: none;
     color: black;
+}
+
+code {
+  font-size: 12px;
 }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-18 21:34-0700\n"
+"POT-Creation-Date: 2017-05-18 21:40-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -27,37 +27,37 @@ msgstr "Inglés"
 msgid "[Spanish]"
 msgstr "[Español]"
 
-#: templates/index.html:22
+#: templates/index.html:24
 msgid "Stories to learn Python stuff."
 msgstr "Talleres para aprender Python."
 
-#: templates/index.html:33
+#: templates/index.html:35
 msgid "Try it"
 msgstr "Pruébalo"
 
-#: templates/index.html:53
+#: templates/index.html:55
 msgid "Choose a story:"
 msgstr "Selecciona un taller:"
 
-#: templates/index.html:57
+#: templates/index.html:59
 msgid "Sample story (fork or copy to create your own story)."
 msgstr "Taller de muestra (forkear o copiar para crear uno propio)."
 
-#: templates/index.html:65
+#: templates/index.html:67
 msgid "A Pyschool story for learning python essentials."
 msgstr "Una historia de Pyschool para aprender los conceptos esenciales de Python."
 
-#: templates/index.html:70
+#: templates/index.html:72
 msgid "Workshop for learning regular expressions using the commandline."
 msgstr ""
 "Taller para aprender expresiones regulares usando la línea de comando. "
 "Disponible en Inglés solamente"
 
-#: templates/index.html:79
+#: templates/index.html:81
 msgid "Organize"
 msgstr "Organiza"
 
-#: templates/index.html:81
+#: templates/index.html:83
 msgid ""
 "Education is for improving the lives of others and for leaving your "
 "community and world better than you found it"
@@ -65,7 +65,7 @@ msgstr ""
 "La educación es para mejorar las vidas de otros y para dejar tu comunidad"
 " en un mejor estado de la que la encontraste"
 
-#: templates/index.html:84
+#: templates/index.html:86
 #, python-format
 msgid ""
 "PySchool is a fully community driven effort and is 100% open source. This"
@@ -82,7 +82,7 @@ msgstr ""
 "que se espera de los anfitriones es que los eventos no sean con fines de "
 "lucro, y que el modelo de membrecía para participar en ellos sea abierto."
 
-#: templates/index.html:85
+#: templates/index.html:87
 #, python-format
 msgid ""
 "To ask and answer questions about authoring Pyschool content, check out "
@@ -94,11 +94,11 @@ msgstr ""
 " dudes en mandar un %(email_link)s si no encuentras la respuesta para lo "
 "que buscas."
 
-#: templates/index.html:113
+#: templates/index.html:115
 msgid "Contribute"
 msgstr "Contribuye"
 
-#: templates/index.html:115
+#: templates/index.html:117
 msgid ""
 "The only way to learn a new programming language is by writing programs "
 "in it."
@@ -106,7 +106,7 @@ msgstr ""
 "La única forma de aprender un nuevo lenguaje de programación "
 "esescribiendo programas en él."
 
-#: templates/index.html:118
+#: templates/index.html:120
 msgid ""
 "Pyschool could always use more stories, whether as specific python "
 "features, existing libraries, programming concepts, or even programming "
@@ -119,11 +119,11 @@ msgstr ""
 "otros conceptos que no son específicos de Python como manejo de eventos, "
 "hilos, por nombrar algunos. Nuevos talleres siempre son bienvenidos :)"
 
-#: templates/index.html:123
+#: templates/index.html:125
 msgid "Get Started!"
 msgstr "¡Comienza!"
 
-#: templates/index.html:124
+#: templates/index.html:126
 #, python-format
 msgid ""
 "Ready to write your story? Here's how to set up a story for local "
@@ -133,7 +133,7 @@ msgstr ""
 " ambiente local de desarrollo. Todos los talleres derivan de la "
 "biblioteca %(story_link)s."
 
-#: templates/index.html:128
+#: templates/index.html:130
 #, python-format
 msgid ""
 "Fork/clone/copy the %(hipyschool_link)s or the %(hipy101_link)s repo on "
@@ -142,7 +142,7 @@ msgstr ""
 "Forkea, clona o copia los repositores de %(hipyschool_link)s o "
 "%(hipy101_link)s. Son dos buenos ejemplos de talleres para comenzar."
 
-#: templates/index.html:135
+#: templates/index.html:137
 msgid ""
 "Install your local copy into a virtualenv. Assuming you have "
 "virtualenvwrapper installed, this is how you could set up your copy for "
@@ -152,7 +152,7 @@ msgstr ""
 "virtualenvwrapper instalaldo, puedes inicializar tu copia local para "
 "desarrollo de la siguiente manera:"
 
-#: templates/index.html:141
+#: templates/index.html:143
 msgid ""
 "Create a module for your <em>Story</em>. For example "
 "<code>mystory/__init__.py</code>."
@@ -160,7 +160,7 @@ msgstr ""
 "Crea un módulo para tu clase <em>Story</em>. Por ejemplo "
 "<code>mystory/__init__.py</code>."
 
-#: templates/index.html:142
+#: templates/index.html:144
 msgid ""
 "Define the <code>name</code>, <code>title</code> and "
 "<code>adventures</code> variables."
@@ -168,7 +168,7 @@ msgstr ""
 "Define los atributos <code>name</code>, <code>title</code> and "
 "<code>adventures</code>."
 
-#: templates/index.html:143
+#: templates/index.html:145
 msgid ""
 "You will have to use the <code>gettext()</code> function from "
 "<code>story.translation</code> to receive translations. More on that "
@@ -178,7 +178,7 @@ msgstr ""
 "<code>story.translation</code> para recibir traducciones. Más abajo se "
 "tratará con detenimiento."
 
-#: templates/index.html:146
+#: templates/index.html:148
 msgid ""
 "Create one or more <em>Adventures</em>. A story is a collection of one or"
 " more adventures"
@@ -186,7 +186,7 @@ msgstr ""
 "Crea una o más <em>Aventuras</em>. Un taller es una colección de una o "
 "más aventuras"
 
-#: templates/index.html:148
+#: templates/index.html:150
 msgid ""
 "Create a module for your adventure for example "
 "<code>mystory/myfirstadventure</code>"
@@ -194,26 +194,26 @@ msgstr ""
 "Crea un módulo con tu aventura. Por ejemplo "
 "<code>mystory/myfirstadventure</code>"
 
-#: templates/index.html:149
+#: templates/index.html:151
 msgid ""
 "Create the <code>README.rst</code> file describing your adventure in the "
 "previous folder"
 msgstr "Crea el archivo <code>README.rst</code> conteniendo tu aventura"
 
-#: templates/index.html:150
+#: templates/index.html:152
 msgid ""
 "(Optional) Make an Spanish translation. You must name it "
 "<code>README.es.rst</code>"
 msgstr "Haz una traducción a español. Debes de llamarla <code>README.es.rst</code>"
 
-#: templates/index.html:151
+#: templates/index.html:153
 #, python-format
 msgid ""
 "In the <code>__init__.py</code> file define a class called "
 "<code>Adventure</code>, that derives from %(baseadventure_link)s."
 msgstr "Define una clase llamada <code>Adventure</code> e"
 
-#: templates/index.html:157
+#: templates/index.html:159
 #, python-format
 msgid ""
 "Since the <code>gettext()</code> function relies on %(pybabel_link)s, so "
@@ -223,7 +223,7 @@ msgstr ""
 "%(pybabel_link)s, por lo tanto debes inicializar las traducciones "
 "ejecutando:"
 
-#: templates/index.html:162
+#: templates/index.html:164
 msgid ""
 "You should see several files for each language in "
 "<code>mystory/locale/</code> corresponding for the usages of the "
@@ -232,17 +232,17 @@ msgstr ""
 "Deberías ver varios archivos en la carpeta <code>mystory/locale/</code>, "
 "correspondientes a los usos de la función <code>gettext()</code>"
 
-#: templates/index.html:163
+#: templates/index.html:165
 msgid "If the command fail, try again."
 msgstr "Si el comando falla, intenta nuevamente."
 
-#: templates/index.html:167
+#: templates/index.html:169
 msgid "(Optional) Modify and add translations in the locale files and then run:"
 msgstr ""
 "(Opcional) Modifica y agrega traducciones in los archivos de la carpeta "
 "<code>locale</code>, y luego ejecuta."
 
-#: templates/index.html:171
+#: templates/index.html:173
 msgid ""
 "It is recommended to create some unit tests for checking your solutions, "
 "check that your changes pass flake8, tox, and the unit tests:"
@@ -251,17 +251,17 @@ msgstr ""
 "soluciones, verifica que tus cambios pasen flak8, tox, así como los tests"
 " unitarios:"
 
-#: templates/index.html:176
+#: templates/index.html:178
 msgid "To get flake8 and tox, just pip install them into your virtualenv."
 msgstr ""
 "Para obtener flake8 y tox, solo corre <code>pip install </code> en tu "
 "virtualenv."
 
-#: templates/index.html:179
+#: templates/index.html:181
 msgid "Commit your changes and push your branch to GitHub:"
 msgstr "Comitea tus cambios y haz un push de tu branch a GitHub:"
 
-#: templates/index.html:185
+#: templates/index.html:187
 #, python-format
 msgid ""
 "%(publish_link_prefix)s Publish</a> your package in pip, so it is "
@@ -270,7 +270,7 @@ msgstr ""
 "%(publish_link_prefix)s Publica</a> tu paquete en pip, para que esté "
 "disponible públicamente."
 
-#: templates/index.html:188
+#: templates/index.html:190
 #, python-format
 msgid ""
 "%(letusknow_link_prefix)s Let us know</a> or submit a pull request to the"
@@ -279,16 +279,16 @@ msgstr ""
 "%(letusknow_link_prefix)s Háznos saber</a> or haz un pull request al "
 "sitio de Pyschool en GitHub."
 
-#: templates/index.html:195
+#: templates/index.html:197
 msgid "Attribution and License"
 msgstr "Atribución y Licencia"
 
-#: templates/index.html:198
+#: templates/index.html:200
 #, python-format
 msgid "Inspired by %(nodeschool_link)s."
 msgstr "Inspirado por %(nodeschool_link)s."
 
-#: templates/index.html:201
+#: templates/index.html:203
 msgid "MIT License."
 msgstr "Licencia MIT."
 

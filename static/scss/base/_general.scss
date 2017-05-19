@@ -1,0 +1,161 @@
+// Site general styles
+// -----------------------------------------------------------------------------
+// Selection style
+::selection {
+  background: $selection;
+}
+
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  @extend %full-height;
+  @extend %full-width;
+  box-sizing: border-box;
+  font-variant-ligatures: common-ligatures;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
+
+body {
+  @extend %full-height;
+  @extend %full-width;
+  @include space(padding, $top: $header-height);
+  background-color: $white;
+  color: $black;
+  font-family: $base-font-family;
+  font-weight: $base-font-regular;
+  line-height: $base-line-height;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;  // scss-lint:disable ImportantRule
+}
+
+a {
+  color: $primary;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 2rem;
+}
+
+ol {
+  padding-left: 2rem;
+}
+
+h1 {
+  @include space(margin, big, $top: true);
+  @include space(margin, small, $bottom: true);
+  color: $primary;
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  line-height: $title-line-height;
+}
+
+h2,
+h3,
+h4 {
+  @include space(margin, regular, $top: true);
+  @include space(margin, small, $bottom: true);
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  line-height: $title-line-height;
+}
+
+p,
+ul,
+ol,
+pre {
+  @include space(margin, small, $top: true, $bottom: true);
+}
+
+pre {
+  @include space(padding, small, $all: true);
+  background-color: $grey;
+  overflow: auto;
+}
+
+code {
+  font-family: $code-font-family;
+  font-weight: $code-font-weight;
+  line-height: $code-line-height;
+}
+
+
+blockquote {
+  @include space(margin, regular, $top: true, $bottom: true);
+  font-weight: $base-font-regular;
+
+  small {
+    @include space(margin, small, $top: true);
+    color: $grey;
+    display: block;
+    font-weight: $base-font-regular;
+  }
+}
+
+figure {
+  @include space(margin, regular, $top: true, $bottom: true);
+  @include space(margin, $left: 0, $right: 0);
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  video {
+    display: block;
+    height: auto !important; // scss-lint:disable ImportantRule
+    width: 100% !important; // scss-lint:disable ImportantRule
+  }
+}
+
+*::-webkit-media-controls-panel {
+  -webkit-appearance: none;
+  display: none !important; // scss-lint:disable ImportantRule
+}
+
+*::--webkit-media-controls-play-button {
+  -webkit-appearance: none;
+  display: none !important; // scss-lint:disable ImportantRule
+}
+
+*::-webkit-media-controls-start-playback-button {
+  -webkit-appearance: none;
+  display: none !important; // scss-lint:disable ImportantRule
+}
+
+iframe {
+  @include space(margin, regular, $top: true, $bottom: true, $left: 0, $right: 0);
+}
+
+@each $element, $breakpoints in $font-sizes {
+  #{$element} {
+    @each $breakpoint, $size in $breakpoints {
+      @include media-breakpoint-up($breakpoint) {
+        font-size: $size;
+      }
+    }
+  }
+}
+
+a[id] {
+  display: block;
+  position: relative;
+  top: $header-height * -1;
+  visibility: hidden;
+}

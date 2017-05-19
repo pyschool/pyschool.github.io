@@ -1,0 +1,60 @@
+.page-home {
+  @extend %page;
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .cover {
+    @extend %full-width;
+    @include space(margin, regular, $bottom: true);
+    background-image: url('../img/pyschool.png');
+    background-position: center top 45%;
+    background-repeat: no-repeat;
+    background-size: auto 20vh;
+
+    @include media-breakpoint-up(md) {
+      background-position: right 56vw top 62%;
+      background-size: 26vw auto;
+    }
+
+    > * {
+      @extend %container;
+      @include box($justify-content: flex-start, $align-items: flex-end);
+      min-height: 0;
+
+      @include media-breakpoint-up(md) {
+        @include box($justify-content: flex-end, $align-items: center);
+        min-height: 70vh;
+      }
+
+      .text {
+        @include item;
+        @include space(padding, big, $bottom: true, $top: 40vh);
+        max-width: 100%;
+
+        @include media-breakpoint-up(md) {
+          @include space(padding, big, $bottom: true, $top: true);
+          width: 100%;
+        }
+
+        @each $breakpoint, $width in $container-max-widths {
+          @if (breakpoint-in($breakpoint, $lower: md)) {
+            @include media-breakpoint-up($breakpoint) {
+              width: calc(50% - #{$width / 2} + #{$width * .5});
+            }
+          }
+        }
+
+
+        h1 {
+          @include media-breakpoint-up(md) {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,22 +3,20 @@ POT_FILE=locale/pyschool.pot
 # Template files
 TEMPLATES=templates/*.html
 # Target files
-TARGET_FILES=index.html index.es.html
+TARGET_FILES=index.en.html index.es.html
 # MAIN CSS FILE
-CSSFILE=css/index.css
+CSSFILE=static/css/main.css
 
 all: $(TARGET_FILES)
 
 clean:
-	rm -f `find -name messages.mo`
+	rm -f local/**/*.mo
+	rm -f static/css/*
 	rm -f $(TARGET_FILES)
-	rm -f $(CSSFILE)
-	rm -f $(CSSFILE).map
-	rm -f index.en.html
 
 # SASS
-$(CSSFILE): styles/*.scss
-	sassc styles/main.scss $@ -m -t compressed
+$(CSSFILE): static/scss/*.scss
+	sassc static/scss/main.scss $@ -m -t compressed
 
 # Translations template
 locale/pyschool.pot: $(TEMPLATES)
@@ -39,15 +37,11 @@ locale/%/LC_MESSAGES/messages.mo: locale/%/LC_MESSAGES/messages.po
 index.%.html: $(TEMPLATES) $(CSSFILE) locale/%/LC_MESSAGES/messages.mo
 	python scripts/render.py index.html --language $* --output index.$*.html
 
-# English target file
-index.html: index.en.html
-	cp $< $@
-
 # Used for local development along with livereload
 watch:
 	python -m http.server 8000 &
 	livereload . -w 2 &
 	while true; do \
 		make all; \
-		inotifywait -qre close_write locale templates styles; \
+		inotifywait -qre close_write locale templates static; \
 	done

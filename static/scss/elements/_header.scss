@@ -1,0 +1,45 @@
+body > header {
+  @extend %full-width;
+  background-color: $white;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  nav {
+    @include container($max-widths: $container-max-widths);
+    @include box($justify-content: space-between, $align-items: center);
+    height: $header-height;
+
+    ul {
+      @include box;
+      @include item;
+
+      li {
+        @include item;
+        @include space(margin, micro, $all: true);
+
+        list-style-type: none;
+
+        a {
+          @include space(padding, micro, $all: true);
+          color: $black;
+          display: block;
+          height: 100%;
+          line-height: 100%;
+          text-transform: uppercase;
+
+          @each $breakpoint, $size in map-get($font-sizes, small) {
+            @include media-breakpoint-up($breakpoint) {
+              font-size: $size;
+            }
+          }
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

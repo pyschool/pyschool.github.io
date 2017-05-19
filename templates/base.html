@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="author" content="Sophilabs">
+        <meta name="publisher" content="Sophilabs">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name='apple-mobile-web-app-capable' content='yes'>
+
+        {% block meta %}
+            <title>PySchool</title>
+            <meta name="description" content="PySchool">
+        {% endblock meta %}
+
+        {% block css %}
+        {% endblock css %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./static/css/main.css">
+        <link rel="shortcut icon" href="./static/extras/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./static/extras/favicon.ico" type="image/x-icon">
+    </head>
+    <body class="{% block class %}{% endblock class %}">
+        <header>
+            <nav>
+                <ul>
+                    <li><strong>PySchool</strong></li>
+                    {% block nav %}
+                    {% endblock nav %}
+                </ul>
+                <ul>
+                    <li><a href="index.html">{{ gettext('[English]') }}</a></li>
+                    <li><a href="index.es.html">{{ gettext('[Spanish]') }}</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block main %}
+        {% endblock main %}
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/pyschool">Github</a></li>
+                    <li><a href="https://twitter.com/pyschool">Twitter</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        {% block js %}
+        {% endblock js %}
+    </body>
+</html>

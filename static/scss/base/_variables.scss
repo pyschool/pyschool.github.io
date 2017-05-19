@@ -1,0 +1,102 @@
+// Global variables
+
+// Fonts
+$base-font-family:      'Work Sans', sans-serif !default;
+$base-font-regular:     400;
+$base-font-bold:        700;
+$base-font-weight:      $base-font-regular;
+$base-line-height:      1.3 !default;
+
+$title-font-family:    'Work Sans', sans-serif !default;
+$title-font-black:     900;
+$title-font-weight:    $title-font-black;
+$title-line-height:    1.3 !default;
+
+$code-font-family:     'Inconsolata', monospace !default;
+$code-font-regular:    400;
+$code-font-bold:       700;
+$code-font-weight:     $code-font-regular;
+$code-line-height:     1.3 !default;
+
+$font-sizes: (
+  html: (
+    xs: 14px,
+    sm: 15px,
+    md: 16px,
+    lg: 18px,
+    xl: 19px,
+  ),
+  body: (
+    xs: 1rem
+  ),
+  micro: (
+    xs: .68rem
+  ),
+  small: (
+    xs: .78rem
+  ),
+  h1: (
+    xs: 2.3rem,
+    lg: 3.5rem,
+    xl: 4rem
+  ),
+  h2: (
+    xs: 1.8rem,
+    lg: 2.2rem,
+    xl: 2.4rem,
+  ),
+  h3: (
+    xs: 1.25rem
+  ),
+  blockquote: (
+    xs: 1.7rem
+  )
+) !default;
+
+
+// Colors
+$primary:   rgb(27, 117, 231);
+$white:     rgb(255, 255, 255);
+$black:     rgb(44, 50, 56);
+$grey:      rgb(235, 238, 242);
+
+// Selection
+$selection:               rgba(27, 117, 231, .7);
+
+$header-height: 70px;
+$columns: 6;
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 990px,
+  xl: 1200px
+) !default;
+
+$space-sizes: (
+  micro: (
+    xs: .2rem,
+    lg: .3rem,
+  ),
+  small: (
+    xs: .4rem,
+    lg: .6rem,
+  ),
+  regular: (
+    xs: 1.4rem,
+    lg: 2.2rem,
+  ),
+  big: (
+    xs: 2.8rem,
+    lg: 5.6rem,
+  )
+) !default;
+
+$container-max-widths: () !default;
+@each $breakpoint, $size in $grid-breakpoints {
+  @if ($size > 0) {
+    $container-max-widths: map-merge($container-max-widths, ($breakpoint: $size));
+  }
+}

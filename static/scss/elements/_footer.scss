@@ -1,0 +1,40 @@
+body > footer {
+  @extend %full-width;
+  @include space(margin, big, $top: true, $bottom: true);
+
+  nav {
+    @include container($max-widths: $container-max-widths);
+    @include box($justify-content: center, $align-items: center);
+
+    ul {
+      @include box;
+      @include item;
+
+      li {
+        @include item;
+        @include space(margin, micro, $all: true);
+
+        list-style-type: none;
+
+        a {
+          @include space(padding, micro, $all: true);
+          color: $black;
+          display: block;
+          height: 100%;
+          line-height: 100%;
+          text-transform: uppercase;
+
+          @each $breakpoint, $size in map-get($font-sizes, small) {
+            @include media-breakpoint-up($breakpoint) {
+              font-size: $size;
+            }
+          }
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

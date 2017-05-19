@@ -1,0 +1,198 @@
+%page {
+  @include strip-child-margin;
+
+  main {
+    @include strip-child-margin;
+
+    article {
+      @include strip-child-margin;
+    }
+  }
+}
+
+.content {
+  @extend %full-width;
+  @include space(margin, big, $top: true, $bottom: true);
+
+  > * {
+    @extend %container;
+    @include strip-child-margin;
+
+    > * {
+      @include column((xs: 6), $margin: false);
+      @include space(margin, $left: auto, $right: auto);
+    }
+
+    .action {
+      @include space(margin, regular, $top: true, $bottom: true);
+      text-align: center;
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    .split {
+      @include space(margin, regular, $top: true, $bottom: true);
+      @include box($direction: row, $wrap: wrap);
+
+      > * {
+        @include item;
+        @include column((xs: 6, md: 3));
+      }
+    }
+
+    .trio {
+      @include box($direction: row, $wrap: wrap);
+      @include space(margin, regular, $top: true, $bottom: true);
+
+      > * {
+        @include item;
+        @include column((xs: 6, md: 2));
+      }
+    }
+
+    .numbers {
+      @include box($direction: row, $wrap: wrap, $justify-content: space-between, $align-items: center);
+      @include space(margin, regular, $top: true, $bottom: true);
+      @include space(margin, $left: 0, $right: 0);
+      @include space(padding, $left: 0, $right: 0);
+
+      li {
+        @include space(margin, $left: 0, $right: 0);
+        @include space(padding, $left: 0, $right: 0);
+        @include item;
+        list-style-type: none;
+        width: 50%;
+
+        @include media-breakpoint-up(md) {
+          width: auto;
+        }
+
+        strong {
+          color: $primary;
+          display: block;
+          font-weight: $base-font-bold;
+          line-height: 1;
+          text-align: center;
+
+          @each $breakpoint, $size in map-get($font-sizes, h1) {
+            @include media-breakpoint-up($breakpoint) {
+              font-size: $size * 2;
+            }
+          }
+        }
+
+        p {
+          @include space(margin, small, $top: true);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.widget {
+  @extend %container;
+  @include space(margin, big, $top: true, $bottom: true);
+  @include box($direction: row, $justify-content: center);
+  width: 100%;
+
+  .box {
+    @include item;
+    @include box($direction: row, $wrap: wrap);
+    @include column((xs: 6, md: 4), $margin: false);
+
+    > *:first-child {
+      @include item;
+      @include column((xs: 4, md: 2), $cols: 4);
+      @include box($direction: column, $align-items: center);
+
+      @include media-breakpoint-up(md) {
+        @include box($direction: column, $align-items: flex-end, $justify-content: center);
+      }
+
+      .title {
+        @include item;
+        @include space(padding, $all: 0);
+        @include space(margin, $all: 0);
+        font-weight: $base-font-bold;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          text-align: right;
+          width: 90%;
+        }
+
+        @each $breakpoint, $size in map-get($font-sizes, h2) {
+          @include media-breakpoint-up($breakpoint) {
+            font-size: $size;
+          }
+        }
+      }
+
+      .text {
+        @include item;
+        @include space(padding, $all: 0);
+        @include space(margin, micro, $all: 0, $top: true);
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          text-align: right;
+          width: 90%;
+        }
+
+      }
+
+      figure {
+        @include item;
+        @include space(margin, regular, $all: 0, $top: true);
+      }
+    }
+
+    > *:last-child {
+      @include item;
+      @include column((xs: 4, md: 2), $cols: 4);
+      @include box($direction: column, $align-items: center);
+      @include space(margin, regular, $top: true);
+
+      @include media-breakpoint-up(md) {
+        @include space(margin, regular, $top: 0);
+        @include box($direction: column, $align-items: flex-start, $justify-content: center);
+      }
+
+      .button {
+        @include space(margin, micro, $top: true);
+      }
+    }
+  }
+}
+
+.icons {
+  @include box($direction: row, $wrap: wrap, $justify-content: center);
+  @include space(padding, $all: 0);
+  @include space(margin, regular, $top: true);
+
+  + * {
+    @include space(margin, big, $top: true);
+  }
+
+  li {
+    @include item;
+    @include column((xs: 2, md: 1), $cols: 4);
+    list-style-type: none;
+
+    figure {
+      @include space(margin, $all: 0, $left: auto, $right: auto);
+      width: 80%;
+    }
+
+    small {
+      @include space(margin, small, $top: true);
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+

@@ -1,0 +1,127 @@
+@mixin container($max-widths: $container-max-widths) {
+  @each $breakpoint, $max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $max-width;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include space(padding, regular, $left: true, $right: true);
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin box($direction: null,
+           $wrap: null,
+           $justify-content: null,
+           $align-items: null,
+           $align-content: null) {
+  display: flex;
+  @if ($direction != null) {
+    flex-direction: $direction;
+  }
+  @if ($wrap != null) {
+    flex-wrap: $wrap;
+  }
+  @if ($align-items != null) {
+    align-items: $align-items;
+  }
+  @if ($align-content != null) {
+    align-content: $align-content;
+  }
+  @if ($justify-content != null) {
+    justify-content: $justify-content;
+  }
+}
+
+@mixin item($basis: null, $width: null, $order: null, $grow: 0, $shrink: 0, $align-self: null) {
+  @if ($basis == null) {
+    $basis: auto;
+  }
+
+  flex: $grow $shrink $basis;
+  @if $width != null {
+    width: $width;
+  }
+}
+
+@function get-space($breakpoint, $size: regular) {
+
+  $value: map-get(map-get($space-sizes, $size), $breakpoint);
+  @if ($value != null) {
+    @return $value
+  }
+
+  $breakpoint: breakpoint-prev($breakpoint);
+  @if ($breakpoint != null) {
+    @return get-space($breakpoint, $size);
+  }
+
+  @return null;
+}
+
+@mixin space($target: padding, $size: regular, $all: null, $top: null, $right: null, $bottom: null, $left: null) {
+  $values: (
+    top: $top,
+    right: $right,
+    bottom: $bottom,
+    left: $left
+  );
+  @if ($all != null) {
+    @each $position, $value in $values {
+      @if ($value == null) {
+        $values: map-merge($values, ($position: $all));
+      }
+    }
+  }
+  @each $breakpoint, $breakpoint-value in map-get($space-sizes, $size) {
+    @include media-breakpoint-up($breakpoint) {
+      @each $position, $value in $values {
+        @if ($value == true) {
+          #{$target}-#{$position}: $breakpoint-value;
+        } @else if ($value != null and $value != false) {
+          #{$target}-#{$position}: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin strip-child-margin() {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin column($spans, $cols: $columns, $margin: true) {
+  $prev: 1;
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $span: map-get($spans, $breakpoint) or $prev;
+    $prev: $span;
+    $space: get-space($breakpoint, regular);
+
+    @include media-breakpoint-only($breakpoint) {
+      width: calc((((100% - #{$space * ($cols - 1)}) / #{$cols}) * #{$span}) + #{($span - 1) * $space});
+
+      @if ($margin) {
+        margin-left: $space;
+        margin-top: $space;
+
+        &:nth-child(-n + #{$cols / $span}) {
+          margin-top: 0;
+        }
+
+        &:nth-child(#{$cols / $span}n + 1) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
